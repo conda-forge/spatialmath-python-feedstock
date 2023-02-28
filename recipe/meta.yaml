@@ -28,6 +28,7 @@ requirements:
     - scipy
     - sympy
     - sphinxcontrib-jsmath
+    - typing-extensions
 
 test:
   imports:
