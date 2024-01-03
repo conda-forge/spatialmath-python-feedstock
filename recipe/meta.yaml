@@ -29,6 +29,7 @@ requirements:
     - sympy
     - sphinxcontrib-jsmath
     - typing-extensions
+    - pre_commit
 
 test:
   imports:
