@@ -1,5 +1,5 @@
 {% set name = "spatialmath-python" %}
-{% set version = "1.1.8" %}
+{% set version = "1.1.9" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spatialmath-python-{{ version }}.tar.gz
-  sha256: 379f4f06ed7559d0757c554227a53b51d36c3a1e5f54a6abe90f37105c8dc96a
+  sha256: 1167ed3ee7b40b75fbf419b5878102eee9989c503f1c3862e78e8b358fb23888
 
 build:
   number: 0
