@@ -11,7 +11,7 @@ source:
   sha256: ee1dbd4470abc5d7b1a5a6edc4c431ffb45a8509820c61e1749d56113bed7d88
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
   run:
     - ansitable
-    - colored
+    - colored <1.5.0
     - matplotlib-base
     - numpy
     - python >=3.6
