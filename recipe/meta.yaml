@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
   run:
     - ansitable
-    - colored
+    - colored <1.5.0
     - matplotlib-base
     - numpy
     - python >=3.6
