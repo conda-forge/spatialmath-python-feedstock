@@ -18,13 +18,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
+    - setuptools
   run:
     - ansitable
     - colored <1.5.0
     - matplotlib-base
     - numpy
-    - python >=3.6
+    - python >=3.7
     - scipy
     - sympy
     - sphinxcontrib-jsmath
@@ -41,9 +42,8 @@ test:
     - pip
 
 about:
-  home: https://github.com/petercorke/spatialmath-python
+  home: https://github.com/bdaiinstitute/spatialmath-python
   summary: Provides spatial maths capability for Python.
-  dev_url: https://github.com/petercorke/spatialmath-python
   license: MIT
   license_file: LICENSE
 
