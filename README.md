@@ -3,13 +3,11 @@ About spatialmath-python-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spatialmath-python-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/petercorke/spatialmath-python
+Home: https://github.com/bdaiinstitute/spatialmath-python
 
 Package license: MIT
 
 Summary: Provides spatial maths capability for Python.
-
-Development: https://github.com/petercorke/spatialmath-python
 
 Current build status
 ====================
