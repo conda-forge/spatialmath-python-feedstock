@@ -1,5 +1,5 @@
 {% set name = "spatialmath-python" %}
-{% set version = "1.1.12" %}
+{% set version = "1.1.13" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1b5b0cdc8dfb660f8cf21e7ce8e56fd0987ecf7276bef3811514720c7e021351
+  sha256: 061201e156a99c0464cf2869b3cc515a7413025441f1a54f0e936e37f14d7b3a
   patches:
     - avoid-strict-pinning.patch
 
