@@ -7,27 +7,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 061201e156a99c0464cf2869b3cc515a7413025441f1a54f0e936e37f14d7b3a
   patches:
     - avoid-strict-pinning.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools
   run:
     - ansitable
     - colored <1.5.0
     - matplotlib-base
     - numpy
-    - python >=3.7
+    - python >={{ python_min }}
     - scipy
     - sympy
     - sphinxcontrib-jsmath
@@ -42,6 +42,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bdaiinstitute/spatialmath-python
