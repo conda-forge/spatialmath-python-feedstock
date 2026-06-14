@@ -1,0 +1,41 @@
+From f31f2b9c82b135a2a5054c68a570a2c32ff7f2a4 Mon Sep 17 00:00:00 2001
+From: Sherman Siu <s8siu@uwaterloo.ca>
+Date: Sat, 11 Oct 2025 17:35:42 -0400
+Subject: [PATCH] Use new colored API
+
+---
+ spatialmath/baseposematrix.py | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/spatialmath/baseposematrix.py b/spatialmath/baseposematrix.py
+index 87071df3..469fae87 100644
+--- a/spatialmath/baseposematrix.py
++++ b/spatialmath/baseposematrix.py
+@@ -23,7 +23,7 @@
+ # colored printing of matrices to the terminal
+ #   colored package has much finer control than colorama, but the latter is available by default with anaconda
+ try:
+-    from colored import fg, bg, attr
++    from colored import fore, back, style
+ 
+     _colored = True
+     # print('using colored output')
+@@ -916,12 +916,12 @@ def color(c, f):
+                 else:
+                     return f(c)
+ 
+-            bgcol = color(self._bgcolor, bg)
+-            trcol = color(self._transcolor, fg) + bgcol
+-            rotcol = color(self._rotcolor, fg) + bgcol
+-            constcol = color(self._constcolor, fg) + bgcol
+-            indexcol = color(self._indexcolor[0], fg) + color(self._indexcolor[1], bg)
+-            reset = attr(0)
++            bgcol = color(self._bgcolor, back)
++            trcol = color(self._transcolor, fore) + bgcol
++            rotcol = color(self._rotcolor, fore) + bgcol
++            constcol = color(self._constcolor, fore) + bgcol
++            indexcol = color(self._indexcolor[0], fore) + color(self._indexcolor[1], back)
++            reset = style(0)
+         else:
+             bgcol = ""
+             trcol = ""
