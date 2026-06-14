@@ -9,9 +9,11 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: eb2f043b1c57baab034c01d6d3028eab80f5ec68eaa2ec89cb9572107c336a22
+  patches:
+    - 173.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +24,7 @@ requirements:
     - setuptools
   run:
     - ansitable
-    - colored <1.5.0
+    - colored >=2.0.0,<3
     - matplotlib-base
     - numpy
     - python >={{ python_min }}
