@@ -1,5 +1,5 @@
 {% set name = "spatialmath-python" %}
-{% set version = "1.1.16" %}
+{% set version = "1.1.17" %}
 
 
 package:
@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: eb2f043b1c57baab034c01d6d3028eab80f5ec68eaa2ec89cb9572107c336a22
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 911cc92c070a0d0c5afd5237e0df3a922470fc7e4bc4d034a65d47c8096e8cf8
   patches:
     - 173.patch
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
