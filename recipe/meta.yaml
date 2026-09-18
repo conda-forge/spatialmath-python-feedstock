@@ -9,8 +9,6 @@ package:
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: dfd265b93f5152c02eb8c05bfc8d5f820e76caa715acbdf7bb8f2d60a6ab22ec
-  patches:
-    - 173.patch
 
 build:
   number: 0
