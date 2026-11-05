@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: spatialmath-python
-  version: "1.1.18"
+  version: "1.1.19"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: dfd265b93f5152c02eb8c05bfc8d5f820e76caa715acbdf7bb8f2d60a6ab22ec
+  sha256: 29345ba987f926fbaf1f936904cc4e7d72b1d6a23d9c6d71845f01a9c489ddf3
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
